@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle">
+        <img src="https://www.svgrepo.com/show/24307/sun.svg" alt="Light Theme" class="sun-icon">
+        <img src="https://static.thenounproject.com/png/3874046-200.png" alt="Dark Theme" class="moon-icon">
+    </button>
+    
+    <main>
+        <!-- Search Form -->
+        <!-- Search Form -->
+<form id="weather-form">
+    <input type="text" id="name" autocomplete="off" placeholder="Enter city name">
+    <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <div id="autocomplete-container" class="autocomplete-container"></div> <!-- Added container -->
+</form>
+
+
+        <!-- Weather Information Section -->
+        <section class="result">
+            <figure class="name">
+                <figcaption>London</figcaption> 
+                <img src="https://flagsapi.com/GB/shiny/32.png" alt="London Flag">
+            </figure>
+
+            <figure class="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="Weather Icon">
+                <figcaption>
+                    <span>31</span>
+                    <sup>°</sup>
+                </figcaption> 
+            </figure>
+            <p class="description">Overcast clouds</p>
+            <ul>
+                <li>
+                    <span>Clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                    <span id="clouds">98</span>% 
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span id="humidity">98</span>% 
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                    <span id="pressure">1011</span> hPa
+                </li>
+                <li>
+                    <span>Pollution</span>
+                    <i class="fa-solid fa-smog"></i>
+                    <span id="pollution">--</span> µg/m<sup>3</sup>
+                </li>
+            </ul>
+        </section>
+        
+        <!-- Mood-Based Playlist Suggestions Section -->
+        <section class="playlist-section">
+            <h2>RECOMMENDED PLAYLISTS FOR YOU !!</h2>
+            <div class="playlists" id="playlist-item"> <!-- Updated ID -->
+                <!-- Playlist items will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Smart Clothing & Activity Recommendation Section -->
+        <section class="recommendation-section">
+            <h2>SMART CLOTHING AND RECOMMENDED ACTIVITY !!</h2>
+            <div class="recommendations">
+                <!-- Recommendations will be injected here by JavaScript -->
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
